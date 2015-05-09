@@ -65,6 +65,18 @@ $(document).ready(function() {
  
 });
  </script>
+ <script>
+ $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 35) {
+        $("#top-menu").addClass("scrolling");
+    } else {
+        $("#top-menu").removeClass("scrolling");
+    }
+});
+ 
+ </script>
 
 <!-- Stylesheets -->
 <link rel="stylesheet/less" href="/main.less" type="text/css" />
@@ -91,10 +103,10 @@ $(document).ready(function() {
  <div id ="topbar">
  <div class ="container">
 		<div class="row">
-		  <div class="col-sm-9">
+		  <div class="floatl">
 		     <span class="cont-phone" >0175- 88888888</span> <span class="cont-mail"> contact@website.com </span>
 		  </div>
-		  <div class="col-sm-3">
+		  <div class=" floatr">
 			<div class="menur">
 		     <a href ="#">Sign In</a><a href ="#"> Log In</a> <a href ="#"> My Account</a>
 			 </div>
@@ -104,22 +116,21 @@ $(document).ready(function() {
  </div>
  <div id ="top-menu">
 	 <div class ="container">
-		<div class="row">
 		  <div class="col-sm-3">
 		     <a href="#"> <img src="images/logo.jpg" alt="logo" /> </a>
 			 <h3>Avangard</h3>
-		  </div>
-		  <div class="col-sm-9">
-			<ul class="nav">
+		  </div>	  
+		  <div class="nav">
+			<a href="#" id="menu-icon"><img src="images/menu-icon.png" alt="menu" /></a>
+			<ul>
 			<li> <a href ="#">Home</a> </li>
 			<li> <a href ="#">Features</a> </li>
 			<li> <a href ="#">Blog</a> </li>
 			<li> <a href ="#">Shop</a> </li>
 			<li> <a href ="#">Contact</a> </li>
 			<li> <a href ="#">Impressum</a> </li>
-		     
-		  </div>
-		</div>
+			</ul>
+		     </div>
 	</div>
  </div>
  <div id ="image-over">
@@ -210,58 +221,93 @@ $(document).ready(function() {
  </div>
  </div>
  
- <div id="circles" class="clearfix">
+ <div id="circles">
 	<div class="container">
+	
+	<div class="onecircle">
 	<div class="row left">
-		<div class="col-sm-12 ">
-		<div class="icon"> 
-		<img  class ="c_icon" src="images/c-icon1.png" alt="icon"/>
+		<div class="col-sm-3">
+		<img  class ="circle" align="center" src="images/circle.jpg" alt="icon"/>
+		<img  class ="c_icon" align="center" src="images/c-icon1.png" alt="icon"/>
 		</div>
+		<div class="col-sm-9">
 		<h4>Proffesional<br />
 		Services</h4>
 		<p>In vel augue id nulla commodo mollis. Aliquam interdum sagittis libero et congue. Sed elementum eleifend luctus. Nulla dignissim tortor ut est consequat porttitor ut non orci. Nam eget ante porta, pulvinar metus vel, egestas dui. In maximus tellus id nisl ornare vitae viverra leo ultrices. </p>
-		<img class="line" src="images/c_line.jpg" alt="line" /> 
-		
-		</div>
-	</div>
-	<div class="row right">
-		<div class="col-sm-12 ">
-		<div class="icon"> 
-		<img class ="c_icon" src="images/c-icon2.png" alt="icon"/>
-		</div>
-		<h4>Excellent<br />
-		Quality</h4>
-		<p>In vel augue id nulla commodo mollis. Aliquam interdum sagittis libero et congue. Sed elementum eleifend luctus. Nulla dignissim tortor ut est consequat porttitor ut non orci. Nam eget ante porta, pulvinar metus vel, egestas dui. In maximus tellus id nisl ornare vitae viverra leo ultrices. </p>
-		<img class="line"  src="images/c_line.jpg" alt="line" /> 
-		
 		</div>
 	</div>
 	<div class="row left">
-		<div class="col-sm-12 ">
-		<div class="icon"> 
-		<img class ="c_icon" src="images/c-icon3.png" alt="icon"/>
-		</div>
-		<h4>Competitive<br />
-		Pricing</h4>
-		<p>In vel augue id nulla commodo mollis. Aliquam interdum sagittis libero et congue. Sed elementum eleifend luctus. Nulla dignissim tortor ut est consequat porttitor ut non orci. Nam eget ante porta, pulvinar metus vel, egestas dui. In maximus tellus id nisl ornare vitae viverra leo ultrices. </p>
+		<div class="col-sm-12">
 		<img class="line" src="images/c_line.jpg" alt="line" /> 
-		
+		</div>
+	</div>
+	</div>
+	
+<div class="onecircle">
+	<div class="row right">
+		<div class="col-sm-3"> 
+		<img  class ="circle" align="center" src="images/circle.jpg" alt="icon"/>
+		<img  class ="c_icon" align="center" src="images/c-icon1.png" alt="icon"/>
+
+		</div>
+		<div class="col-sm-9">
+		<h4>Proffesional<br />
+		Services</h4>
+		<div class="clearfix"></div>
+		<p>In vel augue id nulla commodo mollis. Aliquam interdum sagittis libero et congue. Sed elementum eleifend luctus. Nulla dignissim tortor ut est consequat porttitor ut non orci. Nam eget ante porta, pulvinar metus vel, egestas dui. In maximus tellus id nisl ornare vitae viverra leo ultrices. </p>
 		</div>
 	</div>
 	<div class="row right">
-		<div class="col-sm-12 ">
-		<div class="icon"> 
-		<img class ="c_icon" src="images/c-icon4.png" alt="icon"/>
-		</div>
-		<h4>Lifetime<br />
-		Support</h4>
-		<p>In vel augue id nulla commodo mollis. Aliquam interdum sagittis libero et congue. Sed elementum eleifend luctus. Nulla dignissim tortor ut est consequat porttitor ut non orci. Nam eget ante porta, pulvinar metus vel, egestas dui. In maximus tellus id nisl ornare vitae viverra leo ultrices. </p>
+		<div class="col-sm-12">
 		<img class="line" src="images/c_line.jpg" alt="line" /> 
-		
 		</div>
 	</div>
 	</div>
- </div>
+	
+		<div class="onecircle">
+	<div class="row left">
+		<div class="col-sm-3">
+		<img  class ="circle" align="center" src="images/circle.jpg" alt="icon"/>
+		<img  class ="c_icon" align="center" src="images/c-icon1.png" alt="icon"/>
+
+		</div>
+		<div class="col-sm-9">
+		<h4>Proffesional<br />
+		Services</h4>
+		<p>In vel augue id nulla commodo mollis. Aliquam interdum sagittis libero et congue. Sed elementum eleifend luctus. Nulla dignissim tortor ut est consequat porttitor ut non orci. Nam eget ante porta, pulvinar metus vel, egestas dui. In maximus tellus id nisl ornare vitae viverra leo ultrices. </p>
+		</div>
+	</div>
+	<div class="row left">
+		<div class="col-sm-12">
+		<img class="line" src="images/c_line.jpg" alt="line" /> 
+		</div>
+	</div>
+	</div>
+	
+	
+<div class="onecircle">
+	<div class="row right">
+		<div class="col-sm-3"> 
+		<img  class ="circle" align="center" src="images/circle.jpg" alt="icon"/>
+		<img  class ="c_icon" align="center" src="images/c-icon1.png" alt="icon"/>
+
+		</div>
+		<div class="col-sm-9">
+		<h4>Proffesional<br />
+		Services</h4>
+		<div class="clearfix"></div>
+		<p>In vel augue id nulla commodo mollis. Aliquam interdum sagittis libero et congue. Sed elementum eleifend luctus. Nulla dignissim tortor ut est consequat porttitor ut non orci. Nam eget ante porta, pulvinar metus vel, egestas dui. In maximus tellus id nisl ornare vitae viverra leo ultrices. </p>
+		</div>
+	</div>
+	<div class="row right">
+		<div class="col-sm-12">
+		<img class="line" src="images/c_line.jpg" alt="line" /> 
+		</div>
+	</div>
+	</div>
+</div>
+</div>
+	
 
  <div id="numbers">
 	<div class="container gradient">
@@ -287,9 +333,17 @@ $(document).ready(function() {
 
 <div id="ipad"> 
 <div class="container">
+<div class= "col-sm-12 smallbg" style="display: none;">
+<img  style="margin: 0 auto" src="images/ipads.png" width="300px" alt="ipad"/>
+</div>
+<div class= "col-sm-4 ipadbg">
+	<img  class="big" src="images/ipad.png" alt="ipad" width="550px" />
+</div>
+<div class= "col-sm-8 ">
 <h3>Vestibulum Ante Ipsum Primis In Faucibus Orci Luctus </h3>
 <p>Praesent et leo orci. Nam urna est, volutpat nec lacus quis, fermentum elementum tortor. Aliquam ex nunc, rutrum nec sagittis eget, commodo id libero. In ultrices pharetra purus, at porta risus accumsan vitae. Phasellus euismod ultricies mauris, suscipit faucibus orci rhoncus sed. Vivamus et orci vulputate, pretium quam vitae, consectetur tortor. </p>
 <a href="#"> BUY NOW </a>
+</div>
 </div>
 </div>
  
@@ -321,7 +375,7 @@ $(document).ready(function() {
 	<div class="container-fluid">
 		<div class="col-sm-3"><h4>About Us</h4><p>Phasellus at tortor turpis. Mauris elit nisl, fermentum eu neque vel, vehicula aliquet ligula. Suspendisse cursus risus nisl, euismod aliquam diam semper et. Nunc sit amet enim vel tellus malesuada cursus molestie at tellus. Ut a eros aliquam, fringilla lorem rutrum, pellentesque mi. Mauris ut bibendum orci. Aenean posuere enim a hendrerit facilisis.</p></div>
 		<div class="col-sm-3"><h4>Contact</h4>
-		<div class="clearfix">
+		<div class="clearfix social-icons">
 		<a href="#"><img class="social" src="images/soc-ic1.png" alt="social-icon" /></a>
 		<a href="#"><img class="social" src="images/soc-ic2.png" alt="social-icon" /></a>
 		<a href="#"><img class="social" src="images/soc-ic3.png" alt="social-icon" /></a>
@@ -345,7 +399,7 @@ $(document).ready(function() {
 			</div>
 		</div>
 		
-		<div class="col-sm-3"><h4>Recent Posts</h4>
+		<div class="col-sm-3 clearfix"><h4>Recent Posts</h4>
 			<a href="#">Duis euismod iaculis elit, sit amet </a>
 			<a href="#">Aliquam vitae erat nec velit eleifend</a>
 			<a href="#">Morbi ac velit purus</a>
